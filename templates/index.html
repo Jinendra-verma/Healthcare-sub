@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Django</title>
+</head>
+<body>
+    <form action="disease" method="Post">
+      {% csrf_token %}
+        <label for="symp">Symptoms</label>
+      <select name="symp" id="sym" multiple>
+        <option value="0">Joint Pain</option>
+        <option value="1">Acidity</option>
+        <option value="2">Shivering</option>
+        <option value="3">Itching</option>
+        <option value="4">Vomiting</option>
+        <option value="5">Fatigue</option>
+        <option value="6">Anxiety</option>
+      </select>
+      <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
